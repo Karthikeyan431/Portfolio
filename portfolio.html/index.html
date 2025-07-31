@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karthikeyan P - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: black;
+     
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(to left, rgba(38, 39, 38, 0.9), rgba(10, 2, 62, 0.8));
+      z-index: 1000;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(220, 220, 220);
+    }
+
+    nav.menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: linear-gradient(to right, black, blue);
+      border: 1px solid #444;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .dropdown a {
+      display: block;
+      color: #fff;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #1f1f3d;
+    }
+
+    nav.menu:hover .dropdown {
+      display: block;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .section.visible {
+      opacity: 1;
+    }
+
+    .profile-img {
+      display: block;
+      margin: auto;
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+      transition: transform 0.3s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: rgba(243, 239, 10, 0.9);
+      margin-bottom: 20px;
+    }
+
+    .skills-list, .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill-item, .project-item {
+      background: #1a1a2f;
+      padding: 15px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-item:hover, .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    footer {
+      background: linear-gradient(to left, rgba(38, 39, 38, 0.9), rgba(10, 2, 62, 0.9));
+      color: rgba(243, 239, 10, 0.9);
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #66fcf1;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .skill-item, .project-item {
+        width: 90%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="name">Karthikeyan</div>
+    <nav class="menu">
+      <i class="fas fa-ellipsis-v menu-icon"></i>
+      <div class="dropdown">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#internship">Internships</a>
+        <a href="#entrepreneurship">Entrepreneurship</a>
+        <a href="#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/12FlDAyxefyZCa2gERiUl9YKACsSzsuDr/view?usp=drivesdk" target="_blank">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section" id="about">
+    <img src="karthi.png" alt="Karthikeyan Profile Photo" class="profile-img"/>
+    <h1>KARTHIKEYAN P</h1>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      I’m a final year B.Tech IT student with a strong interest in software development. I’ve interned at Lenovo as a Testing Intern and Do It On Web as a Frontend Developer. I’m passionate about building real-world projects and excited to grow as a software developer.
+    </p>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">Java</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">HTML/CSS</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">SQL</div>
+      <div class="skill-item">MS-Excel</div>
+      <div class="skill-item">Canva</div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <img src="https://source.unsplash.com/300x200/?app,code" alt="Student Management System">
+        <p>Student Management System - Java based console app with MySQL integration.</p>
+      </div>
+      <div class="project-item">
+        <img src="https://source.unsplash.com/300x200/?website,design" alt="Portfolio Website">
+        <p>Portfolio Website - Fully responsive and animated personal site (this site).</p>
+      </div>
+      <div class="project-item">
+        <img src="https://source.unsplash.com/300x200/?data,analysis" alt="Data Visualizer">
+        <p>Data Visualizer - Python + Matplotlib dashboard for datasets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Business Intelligence - IBM</li>
+      <li>Artificial Intelligence - Infosys Springboard</li>
+      <li>MS-Excel - Naan Mudhalvan</li>
+      <li><a href="https://drive.google.com/drive/folders/1yjXB9mqqXdWyeu2c2lt9uHohynVI3KUs" target="_blank">View All Certificates</a></li>
+    </ul>
+  </section>
+
+  <section class="section" id="achievements">
+    <h2>Achievements</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">Secured second place in a code debugging contest at DMI College of Engineering. Built useful applications during college tenure.</p>
+  </section>
+
+  <section class="section" id="internship">
+    <h2>Internships</h2>
+    <p><strong>Testing Intern - Lenovo, Pondicherry</strong><br>15/6/2023 - 30/6/2023<br>Worked on manual and automation testing of internal tools. Learned QA documentation and issue tracking.</p>
+    <br>
+    <p><strong>Frontend Developer - Do It On Web, Chennai</strong><br>29/01/2025 - 20/02/2025<br>Built UI components using HTML, CSS, and React. Collaborated with backend team for integrations. Gained experience in responsive design and Git.</p>
+  </section>
+
+  <section class="section" id="entrepreneurship">
+    <h2>Entrepreneurship</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">Founder of KL STALL & DECORS started in 2nd year of college. Specialized in event setups, T-shirt branding, and college merchandise. Gained entrepreneurial skills in budgeting, planning, and customer management.</p>
+  </section>
+
+  <footer class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:pk.karthik2020@gmail.com"><i class="fas fa-envelope"></i> pk.karthik2020@gmail.com</a></p>
+    <p>Phone: 9566061075</p>
+    <p>
+      <a href="https://github.com/Karthikeyan431" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/karthikeyan-p-539627299" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+
+  <script>
+    // Scroll animation: show section when visible
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
